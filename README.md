@@ -149,5 +149,5 @@ FinAlgoritmo
 ```text
 proyecto-nuevo/
 ├── index.html          # Estructura de la página
-├── css/estilos.css      # Diseño responsivo
+├── css/styles.css      # Diseño responsivo
 └── js/script.js         # Lógica con document.getElementById()
