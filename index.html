@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Algorítmica - Fibonacci y Números Primos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="pantallaMenu" class="seccion-menu-inicio">
+        <header class="encabezado-menu">
+            <h1>✨ Plataforma Algorítmica que resuelven problemas: Fibonacci y Números Primos en la vida real ✨</h1>
+            <p class="subtitulo-principal">🌍 Aplicación de modelos lógicos en Planificación Financiera (Sucesión de Fibonacci), Seguridad Informática (Números Primos) y Filtrado Estructural (Fibonacci + Primos) 🌍</p>
+        </header>
+
+        <div class="cuadrícula-opciones">
+            <div class="tarjeta-opcion">
+                <div class="icono-tarjeta">💰</div>
+                <h3>Planificación Financiera y Ahorro Progresivo</h3>
+                <p>Cálculo de un plan de ahorro mensual basado en la Sucesión de Fibonacci para la optimización de capitales.</p>
+                <button type="button" class="btn-navegar" onclick="mostrarProblema('caso1')">Ver el problema 🚀</button>
+            </div>
+
+            <div class="tarjeta-opcion">
+                <div class="icono-tarjeta">🔐</div>
+                <h3>Tokens y Seguridad Informática</h3>
+                <p>Auditoría de seguridad y análisis de residuos de divisibilidad sobre números primos para la validación de accesos criptográficos.</p>
+                <button type="button" class="btn-navegar" onclick="mostrarProblema('caso2')">Ver el problema 🚀</button>
+            </div>
+
+            <div class="tarjeta-opcion">
+                <div class="icono-tarjeta">🧬</div>
+                <h3>Filtrado Estructural Cripto-Evolutivo</h3>
+                <p>Intersección avanzada que genera secuencias dinámicas de Fibonacci y aísla en tiempo real componentes de naturaleza prima.</p>
+                <button type="button" class="btn-navegar" onclick="mostrarProblema('caso3')">Ver el problema 🚀</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenedorProblemas" class="contenedor-dinamico oculto">
+        
+        <button type="button" class="btn-volver" onclick="volverAlMenu()">⬅️ Volver al Menú Principal</button>
+
+        <section id="caso1" class="bloque-caso oculto">
+            <div class="indicador-caso">MÓDULO DE SIMULACIÓN #1</div>
+            <h2 class="titulo-caso">💰 Planificación Financiera y Ahorro Progresivo (Fibonacci)</h2>
+            
+            <div class="seccion-informativa">
+                <h3>📋 1. Justificación y Selección del Problema Real</h3>
+                <p>El desarrollo de una cultura de ahorro suele verse afectado por la falta de esquemas dinámicos adaptados a la capacidad económica incremental del usuario. Al aplicar la secuencia de Fibonacci al presupuesto personal, se establece un modelo donde cada depósito mensual se calcula en base al esfuerzo financiero de los dos meses anteriores, optimizando la acumulación de capital sin desestabilizar la economía diaria del usuario.</p>
+                
+                <h3>🧬 2. Fundamentación Matemática del Algoritmo</h3>
+                <p>La sucesión opera bajo la regla de recurrencia lineal donde cada término posterior representa la suma algebraica de sus dos antecesores inmediatos. Para proyectar la acumulación del saldo global, el algoritmo procesa iterativamente este comportamiento sumando dinámicamente el valor de cada periodo dentro de una variable contadora acumulativa.</p>
+                
+                <h3>⚙️ 3. Desglose del Procedimiento Lógico (Paso a Paso)</h3>
+                <div class="caja-pasos">
+                    <div class="paso"><b>Paso 1: Inicialización de Variables Base</b><br>Se definen los dos primeros términos del ahorro correspondientes al mes 1 y mes 2 con un valor base de Bs. 1, configurando la alcancía acumuladora en cero.</div>
+                    <div class="paso"><b>Paso 2: Execution del Bucle Iterativo Continuo</b><br>Un ciclo controlado calcula el nuevo depósito rotando los valores mediante una variable de apoyo temporal y añade el saldo resultante al acumulador general en cada ciclo.</div>
+                    <div class="paso"><b>Paso 3: Renderizado y Despliegue de Resultados</b><br>El proceso finaliza al alcanzar el límite de meses ingresado por el usuario, inyectando el balance total acumulado en la interfaz gráfica de usuario.</div>
+                </div>
+
+                <h3>💻 El Código Interno del Algoritmo</h3>
+                <div class="caja-codigo-fuente">
+<pre>let actual = 1, anterior = 0, temporal = 0, sumaAcumulada = 0;
+for (let i = 1; i &lt;= meses; i++) {
+    if (i === 1) {
+        sumaAcumulada += actual;
+    } else {
+        temporal = actual + anterior;
+        anterior = actual;
+        actual = temporal;
+        sumaAcumulada += anterior;
+    }
+}</pre>
+                </div>
+            </div>
+
+            <div class="seccion-interactiva">
+                <h3>💻 Simulación y Captura de Parámetros</h3>
+                <form class="formulario-caso">
+                    <div class="campo-control">
+                        <label for="mesesAhorro">Introduzca el periodo total de meses a evaluar:</label>
+                        <input type="number" id="mesesAhorro" value="6" min="1" max="40" required>
+                    </div>
+                    <button type="button" id="btnAhorro" class="btn-ejecutar btn-ahorro">🚀 Ejecutar Análisis Financiero</button>
+                </form>
+
+                <div class="contenedor-pantalla">
+                    <div class="etiqueta-pantalla">📋 DESGLOSE HISTÓRICO CRONOLÓGICO</div>
+                    <div class="resultado-dinamico" id="resAhorro">
+                        <span class="estado-espera">Esperando ingreso de variables numéricas... 🔢</span>
+                    </div>
+                </div>
+
+                <div class="recuadro-conclusion-problema">
+                    <h4>📢 Conclusión de la Simulación Financiera</h4>
+                    <p>El uso de la Sucesión de Fibonacci demuestra que la optimización del ahorro no requiere fórmulas complejas ni almacenamiento masivo en memoria. A través de una rotación lineal de variables puras con una complejidad algorítmica de O(1), es posible estructurar un plan de crecimiento financiero predecible y escalonado que se adapta al progreso económico del usuario sin comprometer el rendimiento del sistema hardware.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="caso2" class="bloque-caso oculto">
+            <div class="indicador-caso">MÓDULO DE SIMULACIÓN #2</div>
+            <h2 class="titulo-caso">🔐 Tokens y Seguridad Informática (Números Primos)</h2>
+            
+            <div class="seccion-informativa">
+                <h3>📋 1. Justificación y Selección del Problema Real</h3>
+                <p>Los entornos digitales modernos requieren validar la integridad de códigos de acceso y llaves de seguridad para prevenir intrusiones o alteraciones de identidad. La criptografía se apoya en las propiedades de exclusividad de los números primos. Este módulo actúa como un filtro de ciberseguridad que audita la estructura matemática de un token numérico para dictaminar si es vulnerable o altamente resistente ante ataques informáticos.</p>
+                
+                <h3>🧬 2. Fundamentación Matemática del Algoritmo</h3>
+                <p>Un número entero se define como primo si y solo si posee exactamente dos divisores positivos: la unidad y él mismo. El algoritmo utiliza una operación de descarte por residuo aritmético mediante el operador de módulo. Si el sistema localiza un divisor exacto intermedio dentro del rango de evaluación, el número pierde su condición de primo de inmediato.</p>
+                
+                <h3>⚙️ 3. Desglose del Procedimiento Lógico (Paso a Paso)</h3>
+                <div class="caja-pasos">
+                    <div class="paso"><b>Paso 1: Validación y Exclusión Inicial</b><br>El programa infraestructura el código y descarta el número 1, debido a que las especificaciones de seguridad exigen valores mayores.</div>
+                    <div class="paso"><b>Paso 2: Bucle de Inspección de Residuos</b><br>Se arranca un ciclo repetitivo que divide el token en forma de residuos sucesivos entre todos los enteros comprendidos entre el 1 y el valor del número ingresado.</div>
+                    <div class="paso"><b>Paso 3: Evaluación de Divisores y Dictamen</b><br>Un condicional cuenta cuántas divisiones resultaron exactas. Si el contador es igual a 2, se aprueba el token; si es mayor, se declara compuesto e insecure.</div>
+                </div>
+
+                <h3>💻 El Código Interno del Algoritmo</h3>
+                <div class="caja-codigo-fuente">
+<pre>let divisoresExactos = 0;
+for (let i = 1; i &lt;= num; i++) {
+    if (num % i === 0) divisoresExactos++;
+}
+if (divisoresExactos === 2) {
+    let tokenAprobado = true;
+}</pre>
+                </div>
+            </div>
+
+            <div class="seccion-interactiva">
+                <h3>💻 Auditoría de Seguridad</h3>
+                <form class="formulario-caso">
+                    <div class="campo-control">
+                        <label for="numeroPrimo">Introduzca el código del token criptográfico:</label>
+                        <input type="number" id="numeroPrimo" value="17" min="1" max="999999" required>
+                    </div>
+                    <button type="button" id="btnSeguridad" class="btn-ejecutar btn-seguridad">🚀 Auditar Seguridad del Token</button>
+                </form>
+
+                <div class="contenedor-pantalla">
+                    <div class="etiqueta-pantalla">🖥️ PANEL DE AUDITORÍA Y ENCRIPTACIÓN</div>
+                    <div class="resultado-dinamico" id="resSeguridad">
+                        <span class="estado-espera">Esperando ingreso de variables numéricas... 🔢</span>
+                    </div>
+                </div>
+
+                <div class="recuadro-conclusion-problema">
+                    <h4>📢 Conclusión del Control de Seguridad</h4>
+                    <p>La evaluación directa de residuos aritméticos proporciona un método infalible para determinar la vulnerabilidad de claves criptográficas. Al comprobar la indivisibilidad mediante operaciones iterativas básicas, el sistema aísla los componentes de naturaleza prima, demostrando que los principios puros de la teoría de números constituyen la defensa primaria más eficiente contra la desencriptación por ataques de fuerza bruta.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="caso3" class="bloque-caso oculto">
+            <div class="indicador-caso">MÓDULO DE SIMULACIÓN #3</div>
+            <h2 class="titulo-caso">🧬 Filtrado Estructural Cripto-Evolutivo (Fibonacci + Primos)</h2>
+            
+            <div class="seccion-informativa">
+                <h3>📋 1. Justificación y Selección del Problema Real</h3>
+                <p>En telecomunicaciones avanzadas y generación de llaves criptográficas asimétricas, el uso de secuencias numéricas simples puede resultar predecible para algoritmos maliciosos. Combinar dos ramas independientes de la teoría de números incrementa exponencialmente la complejidad lógica. Este sistema genera la cadena de Fibonacci y le aplica simultáneamente una auditoría de seguridad para aislar únicamente los valores que posean naturaleza prima.</p>
+                
+                <h3>🧬 2. Fundamentación Matemática del Algoritmo</h3>
+                <p>El módulo procesa una intersección de conjuntos numéricos. Primero, calcula de forma secuencial cada término perteneciente a la sucesión de Fibonacci empleando rotación de variables simples. Segundo, cada término calculado es enviado en tiempo real a un sub-filtro de residuos que comprueba si es divisible únicamente por sí mismo y la unidad, descartando los compuestos de forma inmediata.</p>
+                
+                <h3>⚙️ 3. Desglose del Procedimiento Lógico (Paso a Paso)</h3>
+                <div class="caja-pasos">
+                    <div class="paso"><b>Paso 1: Captura del Límite de Expansión</b><br>Se define la cantidad de términos de la sucesión de Fibonacci que se van a generar e inspeccionar de forma consecutiva dentro del motor del programa.</div>
+                    <div class="paso"><b>Paso 2: Generación e Inspección Simultánea</b><br>El ciclo principal calcula el término de Fibonacci correspondiente y un bucle anidado interno verifica mediante residuos si dicho valor tiene divisores intermedios.</div>
+                    <div class="paso"><b>Paso 3: Concatenación Lineal y Salida</b><br>Los números que superan exitosamente ambas pruebas matemáticas se van uniendo en una cadena limpia que se despliega de manera estructurada en el contenedor del DOM.</div>
+                </div>
+
+                <h3>💻 El Código Interno del Algoritmo</h3>
+                <div class="caja-codigo-fuente">
+<pre>let actual = 1, anterior = 0, temporal = 0;
+for (let i = 1; i &lt;= terminos; i++) {
+    let valorEvaluar = (i === 1) ? actual : (temporal = actual + anterior, anterior = actual, actual = temporal, anterior);
+    let divisores = 0;
+    for (let j = 1; j &lt;= valorEvaluar; j++) {
+        if (valorEvaluar % j === 0) divisores++;
+    }
+}</pre>
+                </div>
+            </div>
+
+            <div class="seccion-interactiva">
+                <h3>💻 Simulación y Captura de Parámetros</h3>
+                <form class="formulario-caso">
+                    <div class="campo-control">
+                        <label for="terminosCombo">Cantidad de términos de Fibonacci a evaluar:</label>
+                        <input type="number" id="terminosCombo" value="10" min="1" max="45" required>
+                    </div>
+                    <button type="button" id="btnCombinado" class="btn-ejecutar btn-combinado">🚀 Iniciar Filtrado Combinado</button>
+                </form>
+
+                <div class="contenedor-pantalla">
+                    <div class="etiqueta-pantalla">📋 HISTORIAL DE GENERACIÓN Y EVALUACIÓN PASO A PASO</div>
+                    <div class="resultado-dinamico" id="resCombinado">
+                        <span class="estado-espera">Esperando ingreso de variables numéricas... 🔢</span>
+                    </div>
+                </div>
+
+                <div class="recuadro-conclusion-problema">
+                    <h4>📢 Conclusión del Filtrado Interseccional</h4>
+                    <p>La combinación asincrónica de bucles anidados para computar la intersección de secuencias complejas demuestra el poder del filtrado estructural. Al evaluar dinámicamente cada eslabón generado, logramos aislar patrones híbridos de alta complejidad lógica con un uso nulo de arrays, garantizando un código de procesamiento nativo, veloz y altamente eficiente para la síntesis de claves evolutivas.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
